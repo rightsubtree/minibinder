@@ -1,0 +1,106 @@
+[ 7428.080913] server(4091|4091): binder_open 
+[ 7428.080926] server(4091|4091): binder_mmap PAGE_SIZE=4096 
+[ 7428.080930] server: binder_mmap: 4091 7f5b2131a000-7f5b21324000 (40 K) vma=ffff9daa28c3f300 
+[ 7428.080936] server: alloc->buffers <0> binder_buffer(@ ffff9daa59aa60c0 user_data=7f5b2131a000 free=1) 
+[ 7428.080940] server: alloc->buffers <1> binder_buffer(@ ffff9daa59aa6960 user_data=7f5b2131b000 free=1) 
+[ 7428.080944] server: alloc->buffers <2> binder_buffer(@ ffff9daa59aa6840 user_data=7f5b2131c000 free=1) 
+[ 7428.080948] server: alloc->buffers <3> binder_buffer(@ ffff9daa59aa6120 user_data=7f5b2131d000 free=1) 
+[ 7428.080952] server: alloc->buffers <4> binder_buffer(@ ffff9daa59aa6540 user_data=7f5b2131e000 free=1) 
+[ 7428.080956] server: alloc->buffers <5> binder_buffer(@ ffff9daa59aa6480 user_data=7f5b2131f000 free=1) 
+[ 7428.080959] server: alloc->buffers <6> binder_buffer(@ ffff9daa59aa6240 user_data=7f5b21320000 free=1) 
+[ 7428.080963] server: alloc->buffers <7> binder_buffer(@ ffff9daa59aa6e40 user_data=7f5b21321000 free=1) 
+[ 7428.080967] server: alloc->buffers <8> binder_buffer(@ ffff9daa59aa6d20 user_data=7f5b21322000 free=1) 
+[ 7428.080970] server: alloc->buffers <9> binder_buffer(@ ffff9daa59aa65a0 user_data=7f5b21323000 free=1) 
+[ 7431.704321] client(4092|4092): binder_open 
+[ 7431.704337] client(4092|4092): binder_mmap PAGE_SIZE=4096 
+[ 7431.704341] client: binder_mmap: 4092 7f7fb2038000-7f7fb2042000 (40 K) vma=ffff9da9c43be4c0 
+[ 7431.704347] client: alloc->buffers <0> binder_buffer(@ ffff9da9e05c26c0 user_data=7f7fb2038000 free=1) 
+[ 7431.704351] client: alloc->buffers <1> binder_buffer(@ ffff9da9e05c2ba0 user_data=7f7fb2039000 free=1) 
+[ 7431.704355] client: alloc->buffers <2> binder_buffer(@ ffff9da9e05c2120 user_data=7f7fb203a000 free=1) 
+[ 7431.704359] client: alloc->buffers <3> binder_buffer(@ ffff9da9e05c2960 user_data=7f7fb203b000 free=1) 
+[ 7431.704363] client: alloc->buffers <4> binder_buffer(@ ffff9da9e05c2420 user_data=7f7fb203c000 free=1) 
+[ 7431.704366] client: alloc->buffers <5> binder_buffer(@ ffff9da9e05c2f00 user_data=7f7fb203d000 free=1) 
+[ 7431.704370] client: alloc->buffers <6> binder_buffer(@ ffff9da9e05c25a0 user_data=7f7fb203e000 free=1) 
+[ 7431.704374] client: alloc->buffers <7> binder_buffer(@ ffff9da9e05c2840 user_data=7f7fb203f000 free=1) 
+[ 7431.704378] client: alloc->buffers <8> binder_buffer(@ ffff9da9e05c2360 user_data=7f7fb2040000 free=1) 
+[ 7431.704382] client: alloc->buffers <9> binder_buffer(@ ffff9da9e05c2a20 user_data=7f7fb2041000 free=1) 
+[ 7450.947909] client: binder_thread_write cmd=BC_TRANSACTION BEGIN { 
+[ 7450.947915] client: binder_transaction() BEGIN { 
+[ 7450.947919] client --> server BC_TRANSACTION data.ptr.buffer=55abebed52f0 data.ptr.offsets=7ffc0f741bc0 data_size=22 offsets_size=24 
+[ 7450.947924] client: binder_alloc_new_buf list_for_each_entry binder_buffer(@ ffff9daa59aa60c0 user_data=7f5b2131a000 free=1) 
+[ 7450.947929] client: binder_alloc_new_buf: GOT free buffer 
+[ 7450.947932] client: binder_update_page_range: allocate=1 start=7f5b2131a000 end=7f5b2131b000 
+[ 7450.947936] client: server(4091) allocate pages for userspace 7f5b2131a000--7f5b2131b000 
+[ 7450.947942] client: allocate: alloc->pages[0] <--> kernel page_ptr=ffffe28c4410d5c0 <--> userspace page_addr=7f5b2131a000 
+[ 7450.947948] client: vm_insert_page(ffff9daa28c3f300, 7f5b2131a000, ffffe28c4410d5c0) 
+[ 7450.947951] client: binder_alloc_get_page: alloc->buffer=7f5b2131a000 binder_buffer(@ ffff9daa59aa60c0 user_data=7f5b2131a000 free=0) buffer_offset=0 
+[ 7450.947956] client: binder_alloc_get_page: index=0 pgoff=0 page=ffffe28c4410d5c0 
+[ 7450.947960] client: binder_alloc_copy_user_to_buffer: kmap(ffffe28c4410d5c0) got kernel virtual addr ffff9da9c4357000 
+[ 7450.947964] client: binder_alloc_copy_user_to_buffer: copy_from_user(ffff9da9c4357000, 55abebed52f0, 22) 
+[ 7450.947968] client: binder_alloc_get_page: alloc->buffer=7f5b2131a000 binder_buffer(@ ffff9daa59aa60c0 user_data=7f5b2131a000 free=0) buffer_offset=18 
+[ 7450.947972] client: binder_alloc_get_page: index=0 pgoff=18 page=ffffe28c4410d5c0 
+[ 7450.947975] client: binder_alloc_copy_user_to_buffer: kmap(ffffe28c4410d5c0) got kernel virtual addr ffff9da9c4357000 
+[ 7450.947982] client: binder_alloc_copy_user_to_buffer: copy_from_user(ffff9da9c4357018, 7ffc0f741bc0, 24) 
+[ 7450.947985] client: --> server BINDER_WORK_TRANSACTION (code=1 buffer=ffff9daa59aa60c0 data_size=22 offsets_size=24) 
+[ 7450.947990] client: --> client BINDER_WORK_TRANSACTION_COMPLETE 
+[ 7450.947993] client: binder_transaction()   END } 
+[ 7450.947997] client: binder_thread_write cmd=BC_TRANSACTION   END } 
+[ 7450.948130] server: binder_thread_read BINDER_WORK_TRANSACTION BEGIN { 
+[ 7450.948135] server: binder_transaction(code=1, data_size=22, offsets_size=24 buffer->user_data=7f5b2131a000) 
+[ 7450.948141] server: put_user: cmd=BR_TRANSACTION 
+[ 7450.948144] server: copy_to_user: binder_transaction_data (code=1 data_size=22 offsets_size=24 data.ptr.buffer=7f5b2131a000 data.ptr.offsets=7f5b2131a018) 
+[ 7450.948148] server: binder_thread_read BINDER_WORK_TRANSACTION   END } 
+[ 7450.948269] server: binder_thread_write cmd=BC_FREE_BUFFER BEGIN { 
+[ 7450.948285] server: BC_FREE_BUFFER data_ptr=7f5b2131a000 
+[ 7450.948289] server: binder_alloc_prepare_to_free list_for_each_entry binder_buffer(@ ffff9daa59aa60c0 user_data=7f5b2131a000 free=0) 
+[ 7450.948293] server: binder_alloc_prepare_to_free: Find the buffer to free 
+[ 7450.948297] server: got binder_buffer(@ ffff9daa59aa60c0 user_data=7f5b2131a000 free=0) 
+[ 7450.948301] server: server(4091) binder_alloc_free_buf binder_buffer(@ ffff9daa59aa60c0 user_data=7f5b2131a000 free=0) 
+[ 7450.948305] server: binder_update_page_range: allocate=0 start=7f5b2131a000 end=7f5b2131b000 
+[ 7450.948309] server: server(4091) free pages for userspace 7f5b2131a000--7f5b2131b000 
+[ 7450.948318] server: free: alloc->pages[0] <--> kernel page_ptr ffffe28c4410d5c0 <--> userspace page_addr 7f5b2131a000 
+[ 7450.948322] server: binder_alloc_free_buf() done! 
+[ 7450.948326] server: binder_thread_write cmd=BC_FREE_BUFFER   END } 
+[ 7450.948330] server: binder_thread_write cmd=BC_REPLY BEGIN { 
+[ 7450.948333] server: binder_transaction() BEGIN { 
+[ 7450.948337] server --> client BC_REPLY data.ptr.buffer=55e86839a8b0 data.ptr.offsets=7ffd81825f88 data_size=12 offsets_size=8 
+[ 7450.948342] server: binder_alloc_new_buf list_for_each_entry binder_buffer(@ ffff9da9e05c26c0 user_data=7f7fb2038000 free=1) 
+[ 7450.948346] server: binder_alloc_new_buf: GOT free buffer 
+[ 7450.948349] server: binder_update_page_range: allocate=1 start=7f7fb2038000 end=7f7fb2039000 
+[ 7450.948353] server: client(4092) allocate pages for userspace 7f7fb2038000--7f7fb2039000 
+[ 7450.948358] server: allocate: alloc->pages[0] <--> kernel page_ptr=ffffe28c4410d5c0 <--> userspace page_addr=7f7fb2038000 
+[ 7450.948362] server: vm_insert_page(ffff9da9c43be4c0, 7f7fb2038000, ffffe28c4410d5c0) 
+[ 7450.948366] server: binder_alloc_get_page: alloc->buffer=7f7fb2038000 binder_buffer(@ ffff9da9e05c26c0 user_data=7f7fb2038000 free=0) buffer_offset=0 
+[ 7450.948370] server: binder_alloc_get_page: index=0 pgoff=0 page=ffffe28c4410d5c0 
+[ 7450.948374] server: binder_alloc_copy_user_to_buffer: kmap(ffffe28c4410d5c0) got kernel virtual addr ffff9da9c4357000 
+[ 7450.948378] server: binder_alloc_copy_user_to_buffer: copy_from_user(ffff9da9c4357000, 55e86839a8b0, 12) 
+[ 7450.948382] server: binder_alloc_get_page: alloc->buffer=7f7fb2038000 binder_buffer(@ ffff9da9e05c26c0 user_data=7f7fb2038000 free=0) buffer_offset=10 
+[ 7450.948386] server: binder_alloc_get_page: index=0 pgoff=10 page=ffffe28c4410d5c0 
+[ 7450.948390] server: binder_alloc_copy_user_to_buffer: kmap(ffffe28c4410d5c0) got kernel virtual addr ffff9da9c4357000 
+[ 7450.948394] server: binder_alloc_copy_user_to_buffer: copy_from_user(ffff9da9c4357010, 7ffd81825f88, 8) 
+[ 7450.948398] server: --> client BINDER_WORK_TRANSACTION (code=1 buffer=ffff9da9e05c26c0 data_size=12 offsets_size=8) 
+[ 7450.948402] server: --> server BINDER_WORK_TRANSACTION_COMPLETE 
+[ 7450.948406] server: binder_transaction()   END } 
+[ 7450.948410] server: binder_thread_write cmd=BC_REPLY   END } 
+[ 7450.948418] client: binder_thread_read BINDER_WORK_TRANSACTION_COMPLETE BEGIN { 
+[ 7450.948426] client: binder_thread_read BINDER_WORK_TRANSACTION_COMPLETE   END } 
+[ 7450.948772] server: binder_thread_read BINDER_WORK_TRANSACTION_COMPLETE BEGIN { 
+[ 7450.948774] server: binder_thread_read BINDER_WORK_TRANSACTION_COMPLETE   END } 
+[ 7450.948775] client: binder_thread_read BINDER_WORK_TRANSACTION BEGIN { 
+[ 7450.948778] client: binder_transaction(code=1, data_size=12, offsets_size=8 buffer->user_data=7f7fb2038000) 
+[ 7450.948782] client: put_user: cmd=BR_REPLY 
+[ 7450.948785] client: copy_to_user: binder_transaction_data (code=1 data_size=12 offsets_size=8 data.ptr.buffer=7f7fb2038000 data.ptr.offsets=7f7fb2038010) 
+[ 7450.948789] client: binder_thread_read BINDER_WORK_TRANSACTION   END } 
+[ 7450.948834] client: binder_thread_write cmd=BC_FREE_BUFFER BEGIN { 
+[ 7450.948838] client: BC_FREE_BUFFER data_ptr=7f7fb2038000 
+[ 7450.948842] client: binder_alloc_prepare_to_free list_for_each_entry binder_buffer(@ ffff9da9e05c26c0 user_data=7f7fb2038000 free=0) 
+[ 7450.948845] client: binder_alloc_prepare_to_free: Find the buffer to free 
+[ 7450.948849] client: got binder_buffer(@ ffff9da9e05c26c0 user_data=7f7fb2038000 free=0) 
+[ 7450.948853] client: client(4092) binder_alloc_free_buf binder_buffer(@ ffff9da9e05c26c0 user_data=7f7fb2038000 free=0) 
+[ 7450.948856] client: binder_update_page_range: allocate=0 start=7f7fb2038000 end=7f7fb2039000 
+[ 7450.948860] client: client(4092) free pages for userspace 7f7fb2038000--7f7fb2039000 
+[ 7450.948867] client: free: alloc->pages[0] <--> kernel page_ptr ffffe28c4410d5c0 <--> userspace page_addr 7f7fb2038000 
+[ 7450.948870] client: binder_alloc_free_buf() done! 
+[ 7450.948873] client: binder_thread_write cmd=BC_FREE_BUFFER   END } 
+[ 7467.467034] 4092 close vm area 7f7fb2038000-7f7fb2042000 (40 K) vm_flags 18020051 pagep 8000000000000025 
+[ 7470.554500] 4091 close vm area 7f5b2131a000-7f5b21324000 (40 K) vm_flags 18020051 pagep 8000000000000025 

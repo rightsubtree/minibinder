@@ -1,0 +1,47 @@
+mint@mint:/code/minibinder$ ./server
+/proc/self/maps: 
+
+55e828812000-55e828813000 r--p 00000000 08:11 90701858                   /code/minibinder/server
+55e828813000-55e828814000 r-xp 00001000 08:11 90701858                   /code/minibinder/server
+55e828814000-55e828815000 r--p 00002000 08:11 90701858                   /code/minibinder/server
+55e828815000-55e828816000 r--p 00002000 08:11 90701858                   /code/minibinder/server
+55e828816000-55e828817000 rw-p 00003000 08:11 90701858                   /code/minibinder/server
+55e86839a000-55e8683bb000 rw-p 00000000 00:00 0                          [heap]
+7f5b2112b000-7f5b2112e000 rw-p 00000000 00:00 0 
+7f5b2112e000-7f5b21154000 r--p 00000000 08:01 4852061                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f5b21154000-7f5b212a9000 r-xp 00026000 08:01 4852061                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f5b212a9000-7f5b212fc000 r--p 0017b000 08:01 4852061                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f5b212fc000-7f5b21300000 r--p 001ce000 08:01 4852061                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f5b21300000-7f5b21302000 rw-p 001d2000 08:01 4852061                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f5b21302000-7f5b2130f000 rw-p 00000000 00:00 0 
+7f5b2131a000-7f5b21324000 r--p 00000000 00:05 736                        /dev/minibinder
+7f5b21324000-7f5b21326000 rw-p 00000000 00:00 0 
+7f5b21326000-7f5b21327000 r--p 00000000 08:01 4850583                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f5b21327000-7f5b2134c000 r-xp 00001000 08:01 4850583                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f5b2134c000-7f5b21356000 r--p 00026000 08:01 4850583                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f5b21356000-7f5b21358000 r--p 00030000 08:01 4850583                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f5b21358000-7f5b2135a000 rw-p 00032000 08:01 4850583                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ffd81808000-7ffd81829000 rw-p 00000000 00:00 0                          [stack]
+7ffd81902000-7ffd81906000 r--p 00000000 00:00 0                          [vvar]
+7ffd81906000-7ffd81908000 r-xp 00000000 00:00 0                          [vdso]
+
+BR_TRANSACTION 
+
+binder_transaction_data: 
+code=1 
+data_size=22 
+offsets_size=24 
+obj-0: offset=00 data=Hello World 
+obj-1: offset=11 data=World 
+obj-2: offset=16 data=Binder 
+
+get obj: Hello World 
+get obj: World 
+get obj: Binder 
+replace result: Hello Binder 
+write BC_FREE_BUFFER buffer=7f5b2131a000 
+write BC_REPLY data_size=12 offsets_size=8 data.ptr.buffer=55e86839a8b0 data.ptr.offsets=7ffd81825f88 
+BR_TRANSACTION_COMPLETE 
+^C
+mint@mint:/code/minibinder$ 
+

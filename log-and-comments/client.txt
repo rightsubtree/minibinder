@@ -1,0 +1,66 @@
+mint@mint:/code/minibinder$ ./client
+/proc/self/maps: 
+
+55abe3db2000-55abe3db3000 r--p 00000000 08:11 90701856                   /code/minibinder/client
+55abe3db3000-55abe3db4000 r-xp 00001000 08:11 90701856                   /code/minibinder/client
+55abe3db4000-55abe3db5000 r--p 00002000 08:11 90701856                   /code/minibinder/client
+55abe3db5000-55abe3db6000 r--p 00002000 08:11 90701856                   /code/minibinder/client
+55abe3db6000-55abe3db7000 rw-p 00003000 08:11 90701856                   /code/minibinder/client
+55abebed4000-55abebef5000 rw-p 00000000 00:00 0                          [heap]
+7f7fb1e49000-7f7fb1e4c000 rw-p 00000000 00:00 0 
+7f7fb1e4c000-7f7fb1e72000 r--p 00000000 08:01 4852061                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f7fb1e72000-7f7fb1fc7000 r-xp 00026000 08:01 4852061                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f7fb1fc7000-7f7fb201a000 r--p 0017b000 08:01 4852061                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f7fb201a000-7f7fb201e000 r--p 001ce000 08:01 4852061                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f7fb201e000-7f7fb2020000 rw-p 001d2000 08:01 4852061                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f7fb2020000-7f7fb202d000 rw-p 00000000 00:00 0 
+7f7fb2038000-7f7fb2042000 r--p 00000000 00:05 736                        /dev/minibinder
+7f7fb2042000-7f7fb2044000 rw-p 00000000 00:00 0 
+7f7fb2044000-7f7fb2045000 r--p 00000000 08:01 4850583                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f7fb2045000-7f7fb206a000 r-xp 00001000 08:01 4850583                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f7fb206a000-7f7fb2074000 r--p 00026000 08:01 4850583                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f7fb2074000-7f7fb2076000 r--p 00030000 08:01 4850583                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f7fb2076000-7f7fb2078000 rw-p 00032000 08:01 4850583                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ffc0f723000-7ffc0f744000 rw-p 00000000 00:00 0                          [stack]
+7ffc0f7dd000-7ffc0f7e1000 r--p 00000000 00:00 0                          [vvar]
+7ffc0f7e1000-7ffc0f7e3000 r-xp 00000000 00:00 0                          [vdso]
+
+Hello! This is a dummy binder toy with client, server, and driver 
+Client can send 3 text to server, server will do replacement and reply result to client 
+input 'r' to run, or 'q' to quit (both END with ENTER) 
+ 
+r
+
+input the original text(<512), end with ENTER 
+Hello World
+input the oldsub to replace, end with ENTER 
+World
+input the newsub text, end with ENTER 
+Binder
+
+binder_transaction_data: 
+code=1 
+data_size=22 
+offsets_size=24 
+obj-0: offset=00 data=Hello World 
+obj-1: offset=11 data=World 
+obj-2: offset=16 data=Binder 
+
+BR_TRANSACTION_COMPLETE 
+BR_REPLY 
+
+binder_transaction_data: 
+code=1 
+data_size=12 
+offsets_size=8 
+obj-0: offset=00 data=Hello Binder 
+
+write BC_FREE_BUFFER buffer=7f7fb2038000 
+success! result = Hello Binder 
+ 
+input 'r' to run, or 'q' to quit (both END with ENTER) 
+ 
+q
+bye ^_^ 
+mint@mint:/code/minibinder$ 
+
