@@ -15,7 +15,7 @@ struct binder_buffer {
     struct list_head entry;
     unsigned free;
     struct binder_transaction *transaction;
-    // binder_transaction里，如果发现来自用户空间的 cmd=BC_TRANSACTION ，则会填充binder_buffer的target_node域的值为目标service的binder_node；
+    // binder_transaction里，如果发现来自用户空间的BC_TRANSACTION ，则会填充binder_buffer的target_node域的值为目标service的binder_node；
     // 后续流程走到 binder_thread_read，处理 BINDER_WORK_TRANSACTION 时，
     // 如果发现target_node不为空，则驱动会将cmd设置为BR_TRANSACTION，[此时运行在service进程内，是service刚开始取到请求数据]
     // 如果发现target_node为空，则设置cmd为BR_REPLY，[此时运行在client进程内，是驱动获得了service端的reply数据]；

@@ -263,6 +263,7 @@ static int binder_thread_read(struct binder_proc *proc, struct binder_thread *th
             cmd = BR_TRANSACTION_COMPLETE;
             kfree(w);
             if (put_user(cmd, (uint32_t __user *)ptr)) return -EFAULT;
+            printk(KERN_DEBUG "%s: binder_thread_read put_user cmd=BR_TRANSACTION_COMPLETE \n", current->comm);
             ptr += sizeof(uint32_t);
             printk(KERN_DEBUG "%s: binder_thread_read BINDER_WORK_TRANSACTION_COMPLETE   END } \n", current->comm);
             break;

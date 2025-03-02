@@ -1,29 +1,29 @@
 mint@mint:/code/minibinder$ ./server
 /proc/self/maps: 
 
-55e828812000-55e828813000 r--p 00000000 08:11 90701858                   /code/minibinder/server
-55e828813000-55e828814000 r-xp 00001000 08:11 90701858                   /code/minibinder/server
-55e828814000-55e828815000 r--p 00002000 08:11 90701858                   /code/minibinder/server
-55e828815000-55e828816000 r--p 00002000 08:11 90701858                   /code/minibinder/server
-55e828816000-55e828817000 rw-p 00003000 08:11 90701858                   /code/minibinder/server
-55e86839a000-55e8683bb000 rw-p 00000000 00:00 0                          [heap]
-7f5b2112b000-7f5b2112e000 rw-p 00000000 00:00 0 
-7f5b2112e000-7f5b21154000 r--p 00000000 08:01 4852061                    /usr/lib/x86_64-linux-gnu/libc.so.6
-7f5b21154000-7f5b212a9000 r-xp 00026000 08:01 4852061                    /usr/lib/x86_64-linux-gnu/libc.so.6
-7f5b212a9000-7f5b212fc000 r--p 0017b000 08:01 4852061                    /usr/lib/x86_64-linux-gnu/libc.so.6
-7f5b212fc000-7f5b21300000 r--p 001ce000 08:01 4852061                    /usr/lib/x86_64-linux-gnu/libc.so.6
-7f5b21300000-7f5b21302000 rw-p 001d2000 08:01 4852061                    /usr/lib/x86_64-linux-gnu/libc.so.6
-7f5b21302000-7f5b2130f000 rw-p 00000000 00:00 0 
-7f5b2131a000-7f5b21324000 r--p 00000000 00:05 736                        /dev/minibinder
-7f5b21324000-7f5b21326000 rw-p 00000000 00:00 0 
-7f5b21326000-7f5b21327000 r--p 00000000 08:01 4850583                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
-7f5b21327000-7f5b2134c000 r-xp 00001000 08:01 4850583                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
-7f5b2134c000-7f5b21356000 r--p 00026000 08:01 4850583                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
-7f5b21356000-7f5b21358000 r--p 00030000 08:01 4850583                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
-7f5b21358000-7f5b2135a000 rw-p 00032000 08:01 4850583                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
-7ffd81808000-7ffd81829000 rw-p 00000000 00:00 0                          [stack]
-7ffd81902000-7ffd81906000 r--p 00000000 00:00 0                          [vvar]
-7ffd81906000-7ffd81908000 r-xp 00000000 00:00 0                          [vdso]
+55c4ca869000-55c4ca86a000 r--p 00000000 08:11 90701864                   /code/minibinder/server
+55c4ca86a000-55c4ca86b000 r-xp 00001000 08:11 90701864                   /code/minibinder/server
+55c4ca86b000-55c4ca86c000 r--p 00002000 08:11 90701864                   /code/minibinder/server
+55c4ca86c000-55c4ca86d000 r--p 00002000 08:11 90701864                   /code/minibinder/server
+55c4ca86d000-55c4ca86e000 rw-p 00003000 08:11 90701864                   /code/minibinder/server
+55c4e771f000-55c4e7740000 rw-p 00000000 00:00 0                          [heap]
+7f64a7526000-7f64a7529000 rw-p 00000000 00:00 0 
+7f64a7529000-7f64a754f000 r--p 00000000 08:01 4852061                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f64a754f000-7f64a76a4000 r-xp 00026000 08:01 4852061                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f64a76a4000-7f64a76f7000 r--p 0017b000 08:01 4852061                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f64a76f7000-7f64a76fb000 r--p 001ce000 08:01 4852061                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f64a76fb000-7f64a76fd000 rw-p 001d2000 08:01 4852061                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f64a76fd000-7f64a770a000 rw-p 00000000 00:00 0 
+7f64a7715000-7f64a771f000 r--p 00000000 00:05 734                        /dev/minibinder
+7f64a771f000-7f64a7721000 rw-p 00000000 00:00 0 
+7f64a7721000-7f64a7722000 r--p 00000000 08:01 4850583                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f64a7722000-7f64a7747000 r-xp 00001000 08:01 4850583                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f64a7747000-7f64a7751000 r--p 00026000 08:01 4850583                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f64a7751000-7f64a7753000 r--p 00030000 08:01 4850583                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f64a7753000-7f64a7755000 rw-p 00032000 08:01 4850583                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ffff6cca000-7ffff6ceb000 rw-p 00000000 00:00 0                          [stack]
+7ffff6d2f000-7ffff6d33000 r--p 00000000 00:00 0                          [vvar]
+7ffff6d33000-7ffff6d35000 r-xp 00000000 00:00 0                          [vdso]
 
 BR_TRANSACTION 
 
@@ -39,8 +39,8 @@ get obj: Hello World
 get obj: World 
 get obj: Binder 
 replace result: Hello Binder 
-write BC_FREE_BUFFER buffer=7f5b2131a000 
-write BC_REPLY data_size=12 offsets_size=8 data.ptr.buffer=55e86839a8b0 data.ptr.offsets=7ffd81825f88 
+write BC_FREE_BUFFER buffer=7f64a7715000 
+write BC_REPLY data_size=12 offsets_size=8 data.ptr.buffer=55c4e771f8b0 data.ptr.offsets=7ffff6ce92d8 
 BR_TRANSACTION_COMPLETE 
 ^C
 mint@mint:/code/minibinder$ 
