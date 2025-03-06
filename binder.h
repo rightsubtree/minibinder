@@ -15,11 +15,6 @@ struct binder_write_read {
 };
 
 struct binder_transaction_data {
-    union {
-        __u32   handle;
-        binder_uintptr_t ptr;
-    } target;
-    binder_uintptr_t    cookie;
     __u32       code;
     __u32       flags;
     binder_size_t   data_size;

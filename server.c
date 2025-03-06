@@ -106,8 +106,6 @@ int replace_and_reply(struct binder_state *bs, struct binder_transaction_data *t
     data.cmd_free = BC_FREE_BUFFER;
     data.buffer = td->data.ptr.buffer;
     data.cmd_reply = BC_REPLY;
-    data.td.target.ptr = 0;
-    data.td.cookie = 0;
     data.td.code = CODE_REPLACE_AND_REPLY;
     data.td.flags = 0;
     data.td.data_size = strlen(result);
