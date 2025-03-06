@@ -60,8 +60,8 @@ static void binder_transaction(struct binder_proc *proc, struct binder_thread *t
     printk(KERN_DEBUG "%s: binder_transaction() BEGIN { \n", current->comm);
 
     char* cmd_str = reply ? "BC_REPLY" : "BC_TRANSACTION";
-    struct binder_transaction *t;   // 添加到目标进程的todo列表
-    struct binder_work *tcomplete;  // 添加到当前进程的todo列表
+    struct binder_transaction *t;
+    struct binder_work *tcomplete;
     // 用最简单的方法找到目标进程
     struct binder_proc *target_proc = (proc == proc_client ? proc_server : proc_client);
 

@@ -75,19 +75,19 @@ void replace(struct binder_state *bs) {
     offsets[2] = strlen(original) + strlen(oldsub);
     binder_size_t offsets_size = obj_counts * sizeof(binder_size_t);
 
-    struct binder_transaction_data tr;
-    tr.code = CODE_REPLACE_AND_REPLY;
-    tr.data_size = data_size;
-    tr.offsets_size = offsets_size;
-    tr.data.ptr.buffer = (binder_uintptr_t)buffer;
-    tr.data.ptr.offsets = (binder_uintptr_t)offsets;
+    struct binder_transaction_data td;
+    td.code = CODE_REPLACE_AND_REPLY;
+    td.data_size = data_size;
+    td.offsets_size = offsets_size;
+    td.data.ptr.buffer = (binder_uintptr_t)buffer;
+    td.data.ptr.offsets = (binder_uintptr_t)offsets;
 
     // 这里的out相当于标准binder里面 IPCThreadState 类里面的域 `Parcel mOut` ;
     // 第一个数据是 BC_TRANSACTION，类型是 __32，其后是一个 binder_transaction_data 结构体
     binder_size_t write_size = sizeof(__u32) + sizeof(struct binder_transaction_data);
     __u32* write_buffer = (__u32 *)malloc(write_size);
     *write_buffer = BC_TRANSACTION;
-    memcpy(write_buffer + 1, &tr, sizeof(struct binder_transaction_data));
+    memcpy(write_buffer + 1, &td, sizeof(struct binder_transaction_data));
 
     // 先打印一下看看
     print_binder_transaction_data((struct binder_transaction_data *)(write_buffer + 1));
