@@ -1,4 +1,4 @@
-# minibinder 一个可以在PC上运行的极简binder
+# minibinder 一个可以在Linux上运行的极简binder
 
 
 
