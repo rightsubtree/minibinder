@@ -58,4 +58,6 @@ client 和 server的日志直接打在屏幕上；
 
 ## 详细讲解
 
-稍后提供
+请查看：
+
+https://rightsubtree.com/posts/write-a-mini-binder-all-by-yourself/
